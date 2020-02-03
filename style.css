@@ -6,7 +6,7 @@
 }
 
 /* utility classes */
-.flex-centered {
+.flex-centered-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -19,17 +19,17 @@
   box-shadow: 0px 0px 16px -3px #000000;
 }
 
-.font-raleway {
+.font-1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
-.font-roboto {
+.font-2 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-.font-pacifico {
+.font-3 {
   font-family: "Pacifico", cursive;
 }
 
@@ -39,42 +39,57 @@
   max-height: 100vh;
 }
 
-.light {
+.light-bg {
   background-color: #ffffff;
 }
 
-.dark {
+.dark-bg {
   background-color: #333333;
 }
 
-.nav-bar {
-  height: 7vh;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.light-blue {
+  color: #35bdf6;
+}
+.white {
+  color: #ffffff;
 }
 
-.menu {
-  width: 350px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+/* cover style */
 
-  list-style: none;
+.cover {
+  height: 40vh;
+  width: 100vw;
+  background-color: #031e32;
 }
 
-.cover-page {
-  background-image: url("/img/bg1.svg");
+.cover .header {
+  height: 10%;
+  font-size: 20px;
 }
 
-.cover-page .name {
-  font-size: 80px;
+.cover .hello {
+  height: 90%;
+  width: 100%;
 }
 
-.cover-page .role {
+.cover .hello .intro {
+  margin: auto;
+  padding-top: 80px;
+  height: 60%;
+  width: 70%;
+  text-align: center;
   font-size: 50px;
+}
+
+.cover .hello .nav {
+  margin: auto;
+  height: 40%;
+  width: 200px;
+  padding-bottom: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.cover .hello .nav li a {
+  text-decoration: none;
 }
