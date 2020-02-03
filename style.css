@@ -1,0 +1,80 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* utility classes */
+.flex-centered {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-shadow {
+  -webkit-box-shadow: 0px 0px 16px -3px #000000;
+  box-shadow: 0px 0px 16px -3px #000000;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.use-viewport-height {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.light {
+  background-color: #ffffff;
+}
+
+.dark {
+  background-color: #333333;
+}
+
+.nav-bar {
+  height: 7vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  list-style: none;
+}
+
+.cover-page {
+  background-image: url("/img/bg1.svg");
+}
+
+.cover-page .name {
+  font-size: 80px;
+}
+
+.cover-page .role {
+  font-size: 50px;
+}
