@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+  border-radius: 7px;
+}
+
 /* utility classes */
 .flex-centered-container {
   height: 100%;
@@ -57,7 +63,7 @@
 /* cover style */
 
 .cover {
-  height: 40vh;
+  height: 350px;
   width: 100vw;
   background-color: #031e32;
 }
@@ -92,4 +98,135 @@
 }
 .cover .hello .nav li a {
   text-decoration: none;
+}
+
+.portfolio {
+  background-color: #f3f3f3;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* portfolio style */
+.folio-container {
+  /* min-height: 70%; */
+  /* height: 70%; */
+
+  width: 70%;
+
+  margin: 50px auto; /*T R B L / TB LR*/
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content max-content;
+  grid-gap: 50px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  border-radius: 7px;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  background-color: #f3f3f3;
+}
+
+.description {
+  padding: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #031e32;
+}
+
+.image-container {
+  /* box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.7); */
+  border-radius: 7px;
+}
+
+.stack {
+  height: 70vh;
+  background-color: #333333;
+}
+.resume {
+  height: 70vh;
+  background-color: #35bdf6;
+}
+
+@media screen and (min-width: 900px) {
+  .folio-container {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .folio-container {
+    width: 950px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .cover {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .cover .hello .intro {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1145px) {
+  .cover .hello .intro {
+    font-size: 30px;
+  }
+
+  .cover .header {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 855px) {
+  .cover .hello .intro {
+    font-size: 20px;
+  }
+
+  .cover .header {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .folio-container {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    max-width: 300px;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover {
+    height: 300px;
+  }
+
+  .cover .hello .nav,
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .cover .hello .intro {
+    padding-top: 60px;
+  }
+  .cover .hello .nav {
+    padding-bottom: 50px;
+  }
 }
