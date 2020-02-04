@@ -63,15 +63,42 @@ img {
 /* cover style */
 
 .cover {
-  height: 350px;
+  height: 300px;
   width: 100vw;
   background-color: #031e32;
   box-shadow: 0px -1px 51px 3px rgba(0, 0, 0, 0.55);
 }
 
 .cover .header {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
   height: 10%;
   font-size: 20px;
+}
+.cover .header .nav {
+  list-style: none;
+  height: 40%;
+  width: auto;
+  /* padding-bottom: 100px; */
+  display: flex;
+  align-items: center;
+}
+
+.cover .header .nav li a {
+  padding: 0 0.4rem;
+  /* background-color: #35bdf6; */
+}
+
+.cover .header .nav li a:hover {
+  background-color: #35bdf6;
+  color: #031e32;
+}
+
+.cover .header .nav li a {
+  text-decoration: none;
 }
 
 .cover .hello {
@@ -87,19 +114,6 @@ img {
   text-align: left;
   font-size: 50px;
   /* justify-self: center; */
-}
-
-.cover .hello .nav {
-  margin: auto;
-  height: 40%;
-  width: 200px;
-  padding-bottom: 100px;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-.cover .hello .nav li a {
-  text-decoration: none;
 }
 
 .portfolio {
@@ -231,13 +245,17 @@ img {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 1145px) {
+@media screen and (max-width: 1150px) {
   .cover .hello .intro {
     font-size: 30px;
   }
 
   .cover .header {
     font-size: 15px;
+  }
+
+  .cover .header {
+    max-width: 63%;
   }
 
   .stack .stack-container .stack-icons {
@@ -286,14 +304,12 @@ img {
 }
 
 @media screen and (max-width: 570px) {
-  .cover .hello .intro {
-    padding-top: 60px;
-  }
-  .cover .hello .nav {
-    padding-bottom: 50px;
-  }
-
   .stack .stack-container .stack-icons {
     font-size: 1.4rem;
+  }
+
+  .cover .header {
+    max-width: 90%;
+    font-size: 0.5rem;
   }
 }
