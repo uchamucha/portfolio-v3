@@ -63,6 +63,7 @@ img {
 /* cover style */
 
 .cover {
+  /* position: relative; */
   height: 300px;
   width: 100vw;
   background-color: #031e32;
@@ -77,6 +78,7 @@ img {
   max-width: 900px;
   height: 10%;
   font-size: 20px;
+  background-color: #031e32;
 }
 .cover .header .nav {
   list-style: none;
@@ -117,13 +119,23 @@ img {
 }
 
 .portfolio {
-  /* position: relative; */
+  position: relative;
 
   /* background-color: #ffffff; */
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.portfolio .portfolio-bg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+
+  opacity: 0.5;
+  z-index: -1;
 }
 
 /* portfolio style */
@@ -190,15 +202,6 @@ img {
 }
 
 /* also use stack bg for portfolio so keep it fixed and remove portfolio bg */
-.stack .stack-bg {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  opacity: 0.5;
-  z-index: -1;
-}
 
 .stack .stack-container {
   min-height: 400px;
@@ -219,7 +222,7 @@ img {
   justify-content: center;
 }
 
-.resume {
+.about {
   height: 70vh;
   background-color: #35bdf6;
 }

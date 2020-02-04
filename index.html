@@ -21,8 +21,9 @@
       <div class="header font-1 flex-centered-container">
         <p class="white">&ltusamath<span class="light-blue">.dev/&gt</span></p>
         <ul class="nav font-2">
-          <li><a class="light-blue" href="#">Portfolio</a></li>
-          <li><a class="white" href="#">Stack</a></li>
+          <li><a class="light-blue" href="#port">Portfolio</a></li>
+          <li><a class="white" href="#stack">Stack</a></li>
+          <li><a class="white" href="#about">About</a></li>
           <li>
             <a class="white" href="/Resume.pdf" download="Resume">Resume</a>
           </li>
@@ -40,7 +41,9 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="portfolio">
+    <section id="port" class="portfolio">
+      <img class="portfolio-bg" src="/images/bg2.svg" alt="" />
+
       <div class="folio-container">
         <!-- Folio 1 -->
         <section class="project">
@@ -153,9 +156,7 @@
     </section>
 
     <!-- Stack -->
-    <section class="stack">
-      <img class="stack-bg" src="/images/bg2.svg" alt="" />
-
+    <section id="stack" class="stack">
       <div class="stack-container flex-centered-container">
         <div class="stack-icons light-blue ">
           <i class="fab fa-3x fa-html5"></i>
@@ -170,8 +171,11 @@
 
     <!-- About -->
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about-container"></div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
