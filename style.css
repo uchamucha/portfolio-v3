@@ -98,7 +98,7 @@ img {
 }
 
 .cover .header .nav li a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .cover .hello {
