@@ -65,12 +65,8 @@ img {
 .cover {
   height: 350px;
   width: 100vw;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    155deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(18, 72, 112, 1) 100%
-  );
+  background-color: #031e32;
+  box-shadow: 0px -1px 51px 3px rgba(0, 0, 0, 0.55);
 }
 
 .cover .header {
@@ -85,11 +81,12 @@ img {
 
 .cover .hello .intro {
   margin: auto;
-  padding-top: 80px;
+  padding: 80px 30px 0px 30px;
   height: 60%;
-  width: 70%;
-  text-align: center;
+  width: fit-content;
+  text-align: left;
   font-size: 50px;
+  /* justify-self: center; */
 }
 
 .cover .hello .nav {
@@ -106,23 +103,13 @@ img {
 }
 
 .portfolio {
-  position: relative;
+  /* position: relative; */
 
-  /* background-color: #f3f3f3; */
+  /* background-color: #ffffff; */
   height: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-}
-
-.portfolio .portfolio-bg {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  opacity: 0.5;
-  z-index: -1;
 }
 
 /* portfolio style */
@@ -147,7 +134,7 @@ img {
   grid-template-rows: auto;
   border-radius: 7px;
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 .description {
@@ -160,14 +147,61 @@ img {
   color: #031e32;
 }
 
+.description a {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+}
+
+.description a:hover {
+  background-color: #35bdf6;
+  border: 2px solid #000000;
+  color: #031e32;
+  cursor: pointer;
+}
+
 .image-container {
   /* box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.7); */
   border-radius: 7px;
 }
 
 .stack {
-  height: 70vh;
+  /* min-height: 600px; */
+
+  font-size: 40px;
+
   background-color: #031e32;
+}
+
+/* also use stack bg for portfolio so keep it fixed and remove portfolio bg */
+.stack .stack-bg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.stack .stack-container {
+  min-height: 400px;
+}
+
+.stack .stack-container .stack-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 1000px;
+}
+
+.stack .stack-container .stack-icons i {
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .resume {
@@ -205,6 +239,11 @@ img {
   .cover .header {
     font-size: 15px;
   }
+
+  .stack .stack-container .stack-icons {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 855px) {
   .cover .hello .intro {
@@ -238,6 +277,12 @@ img {
   .description {
     font-size: 12px;
   }
+
+  .stack .stack-container .stack-icons {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: smaller;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -246,5 +291,9 @@ img {
   }
   .cover .hello .nav {
     padding-bottom: 50px;
+  }
+
+  .stack .stack-container .stack-icons {
+    font-size: 1.4rem;
   }
 }
