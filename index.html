@@ -173,7 +173,40 @@
 
     <section id="about" class="about">
       <div class="about-container">
-        <div class="message-me">Netlify Form Goes Here</div>
+        <div class="message-me">
+          Netlify Form Goes Here
+          <form action="POST" data-netlify="true">
+            <div class="fields">
+              <div class="field-half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="field-half">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="field">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input type="submit" value="Send Message" />
+              </li>
+            </ul>
+          </form>
+        </div>
         <div class="social">Social LInks Go here</div>
         <div class="text">Hallo I am Usama</div>
         <div class="dependencies">Made with these, these and these.</div>
