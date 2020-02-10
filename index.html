@@ -13,13 +13,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Usamath Pallikkachalil</title>
   </head>
   <body>
     <!-- cover -->
     <section class="cover">
       <div class="header font-1 flex-centered-container">
-        <p class="white">&ltusamath<span class="light-blue">.dev/&gt</span></p>
+        <p class="white">usamath<span class="light-blue">.dev</span></p>
         <ul class="nav font-2">
           <li><a class="light-blue" href="#port">Portfolio</a></li>
           <li><a class="white" href="#stack">Stack</a></li>
@@ -172,45 +172,84 @@
     <!-- About -->
 
     <section id="about" class="about">
-      <div class="about-container">
-        <div class="message-me">
-          Netlify Form Goes Here
-          <form action="POST" data-netlify="true">
-            <div class="fields">
-              <div class="field-half">
-                <input type="text" name="name" id="name" placeholder="Name" />
-              </div>
-              <div class="field-half">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="field">
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="10"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="field">
-                <div data-netlify-recaptcha="true"></div>
-              </div>
-            </div>
-            <ul class="actions">
-              <li>
-                <input type="submit" value="Send Message" />
-              </li>
-            </ul>
-          </form>
+      <div class="left-side">
+        <div class="text">
+          <p>
+            Hi. I code and push pixels when I'm bored. I'm passionate about
+            developing clean, beautiful and user friendly interfaces. I'm
+            acquainted with HTML5, CSS3 and JavaScript and now I'm teaching
+            myself React.
+          </p>
         </div>
-        <div class="social">Social LInks Go here</div>
-        <div class="text">Hallo I am Usama</div>
-        <div class="dependencies">Made with these, these and these.</div>
-        <div class="footer">Usamath footer</div>
+
+        <hr />
+
+        <div class="dependencies">
+          <p>
+            Dependencies:
+            <a href="https://www.fontawesome.com">Fontawesome, </a
+            ><a href="https://github.com/cferdinandi/smooth-scroll"
+              >Smoothscroll.js, </a
+            ><a href="https://www.fonts.google.com">Google Fonts</a>
+          </p>
+        </div>
+
+        <hr />
+
+        <div class="social">
+          <p>
+            Find me on
+            <span
+              ><a href="https://in.linkedin.com/in/usamathpc"
+                >LinkedIn <i class="fab fa-1x fa-linkedin"></i
+              ></a>
+            </span>
+            and
+            <span
+              ><a href="https://github.com/uchamucha">
+                GitHub <i class="fab fa-1x fa-github"></i></a
+            ></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="message-me">
+        <form action="POST" data-netlify="true">
+          <div class="fields">
+            <div class="field-half">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="field-half">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your E-Mail"
+              />
+            </div>
+            <div class="field">
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <div class="field">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          </div>
+          <ul class="actions">
+            <li>
+              <input id="submit" type="submit" value="Send" />
+            </li>
+          </ul>
+        </form>
       </div>
     </section>
 
