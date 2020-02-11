@@ -117,7 +117,7 @@ img {
 }
 
 .cover .hello {
-  height: 90%;
+  height: 75%;
   width: auto;
 
   display: flex;
@@ -126,8 +126,8 @@ img {
 }
 
 .cover .hello .intro {
-  margin: auto;
-  padding: 0 20px 0 20px;
+  margin: 5% 0 5% 0;
+  padding: 0 40px 0 40px;
   height: 60%;
   width: 100%;
   text-align: left;
@@ -511,7 +511,7 @@ input {
 
 @media screen and (max-width: 768px) {
   .cover {
-    height: 200px;
+    height: 250px;
   }
 
   .cover .hello .nav,
