@@ -334,8 +334,7 @@ input {
 
 #name,
 #email,
-#message,
-.captcha {
+#message {
   font-family: "Roboto", sans-serif;
   border-radius: 3px;
   outline: none;
