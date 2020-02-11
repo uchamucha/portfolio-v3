@@ -68,7 +68,7 @@ img {
 
 .cover {
   /* position: relative; */
-  height: 300px;
+  height: 200px;
   width: 100vw;
   background-color: #031e32;
   box-shadow: 0px -1px 51px 3px rgba(0, 0, 0, 0.55);
@@ -76,6 +76,7 @@ img {
 
 .cover .header {
   margin: auto;
+  padding: 10px 0 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,17 +117,24 @@ img {
 
 .cover .hello {
   height: 90%;
-  width: 100%;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cover .hello .intro {
   margin: auto;
-  padding: 80px 30px 0px 30px;
+  padding: 0 20px 0 20px;
   height: 60%;
-  width: fit-content;
+  width: 100%;
   text-align: left;
   font-size: 50px;
-  /* justify-self: center; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio {
@@ -189,9 +197,9 @@ img {
   justify-self: center;
   text-align: center;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "Roboto", sans-serif;
-  color: #031e32;
+  color: rgba(3, 30, 50, 0.6);
 }
 
 .description a {
@@ -270,7 +278,7 @@ input {
 }
 
 .about .message-me {
-  margin: 10px;
+  margin: 10px 0 10px 0;
   width: 40%;
   min-width: 300px;
   max-width: 450px;
@@ -298,8 +306,8 @@ input {
 
 .about .left-side {
   max-width: 450px;
-
-  margin: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
   width: 40%;
   min-width: 300px;
   /* max-height: 200px; */
@@ -317,6 +325,11 @@ input {
 .about .left-side .social a,
 .about .left-side .dependencies a {
   text-decoration: none;
+  color: rgba(53, 189, 246, 0.6);
+}
+
+.about .left-side .dependencies a:hover {
+  color: #35bdf6;
 }
 
 .about .left-side .text {
@@ -326,10 +339,15 @@ input {
 .about .left-side .dependencies {
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .about .left-side .social {
   margin-top: 20px;
+}
+
+.about .left-side .social span a:hover {
+  color: #35bdf6;
 }
 
 #name,
@@ -339,7 +357,7 @@ input {
   border-radius: 3px;
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 5px;
+  margin: 5px 0 5px 0;
   width: 100%;
   border: none;
   box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
@@ -379,9 +397,19 @@ input {
   font-size: 1rem;
   box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
     0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
-  margin: 5px;
+  margin: 5px 0 5px 0;
   border-radius: 3px;
   width: 100%;
+}
+
+.about-title {
+  font-family: "Roboto", sans-serif;
+  color: rgba(3, 30, 50, 0.6);
+  padding: 5px 0 5px 0;
+}
+
+.left-side .about-title {
+  padding-left: 0;
 }
 
 @media screen and (min-width: 900px) {
@@ -397,7 +425,11 @@ input {
   }
 
   .cover {
-    height: 450px;
+    height: 300px;
+  }
+
+  .cover .header {
+    padding: 20px 0 20px 0;
   }
 }
 
@@ -407,6 +439,10 @@ input {
   }
 }
 @media screen and (max-width: 1150px) {
+  .cover {
+    height: 300px;
+  }
+
   .cover .hello .intro {
     font-size: 30px;
   }
@@ -417,11 +453,16 @@ input {
 
   .cover .header {
     max-width: 63%;
+    padding: 20px 0 20px 0;
   }
 
   .stack .stack-container .stack-icons {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+  .stack-container .stack-icons {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 855px) {
@@ -431,6 +472,21 @@ input {
 
   .cover .header {
     font-size: 10px;
+  }
+
+  .about-title {
+    font-size: 1.25rem;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  #name::placeholder,
+  #email::placeholder,
+  #message::placeholder,
+  #submit {
+    font-size: 0.8rem;
   }
 }
 
@@ -449,18 +505,20 @@ input {
 
 @media screen and (max-width: 768px) {
   .cover {
-    height: 300px;
+    height: 200px;
   }
 
   .cover .hello .nav,
   .description {
     font-size: 12px;
   }
+}
 
+@media screen and (max-width: 650px) {
   .stack .stack-container .stack-icons {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    font-size: smaller;
+    font-size: 1.4rem;
   }
 }
 
@@ -472,5 +530,32 @@ input {
   .cover .header {
     max-width: 90%;
     font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .left-side,
+  .about .left-side .text,
+  .field-half,
+  .field,
+  .about-title,
+  .message-me,
+  .fields,
+  form,
+  hr,
+  #submit,
+  #name,
+  #email,
+  #message {
+    max-width: 80vw;
+  }
+
+  .left-side {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .message-me {
+    padding-left: 15px;
   }
 }
